@@ -1,0 +1,121 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">  
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE8">
+	<title>Squares</title>
+    <!-- load Kendo CSS -->
+    <link rel="stylesheet" href="kendo.default.min.css"/>
+	<link rel="stylesheet" href="kendo.common.min.css"/>
+	<link rel="stylesheet" href="kendo.silver.min.css"/>
+	<link rel="stylesheet" href="kendo.dataviz.min.css"/>
+    <!-- load widget CSS -->
+	<link rel="stylesheet" href="ibe.kendo.all.min.css"/>
+    <!-- load app CSS -->
+    <link rel="stylesheet" href="app.css"/>
+</head>
+<body>
+<!-- load jQuery and Kendo scripts -->
+<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="kendo.all.min.js"></script>
+<!-- load IBE scripts -->
+<!-- <script type="text/javascript" src="/file/ibe.kendo.all.min.js"></script> -->
+<script type="text/javascript" src="ibe.kendo.all.min.js"></script>
+<!-- TEST DATA (DELETE) -->
+<script type="text/javascript" src="testData.js"></script>
+<!-- Fascinations Test Data -->
+<script type="text/javascript" src="data.js"></script>
+<!-- load app script -->
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript">
+/*    var ibe;
+
+    $(document).ready(function () {
+        // create ibe session to handle auth/logon
+        ibe = new IBE.SessionManager({
+            // these placeholders are REQUIRED!
+            authString: "$IBAUTH",
+            authUser: "$IBUSER",
+            // the id of the main Application
+            app: "app",
+            // title for the logon window
+            logonTitle: "Please log-on",
+            // optional UI element names for user and version (will be set after logon)
+            currentUser: "user",
+            currentVersion: "version",
+            // for testing, pre-fill User and Password to avoid Logon Window
+            autoLogonUser: "admin",
+            autoLogonPassword: "admin",
+            // callback function
+            onLogon: beginApp
+        });
+        // start the logon process -- will call the callback when logon is complete (or WinAuth)
+        ibe.logon();
+    });*/
+</script>
+
+<div id="app">
+
+
+    <div id="topBanner">
+        <!-- <h1>Squares Demo</h1> -->
+        <img src="./logo.png" alt="" style="width:200px; height:75px; padding: 5px;">
+    </div>
+
+
+
+    
+
+
+
+
+    <script type="text/x-kendo-tmpl" id="mill_squares_template">
+         <div class="ibe-listview-item ${ga_gender}" 
+            data-organization="${Organization}"
+            data-ga_gender = "${ga_gender}"
+            data-archetype="${archetype}">
+           <table cellspacing="1" cellpadding="1" border="0">
+             <tr><td><b>${Organization}</b></tr>
+             <tr><td><b>${ga_gender}</b></tr>
+             <tr><td><b>${archetype}</b></tr>
+           </table>
+         </div>
+    </script>
+    <div id="lv"></div>
+
+    <div id="sortAndFilterContainer">
+        <div>Select Sort
+            <ul id="ulSortButtons" class="ulBtnInline">
+                <li><input type="button" value="Organization" id="listviewSort1" class="sortButtons"></li>
+                <li><input type="button" value="Gender" id="listviewSort2" class="sortButtons"></li>
+                <li><input type="button" value="archetype" id="listviewSort3" class="sortButtons"></li>
+            </ul>
+        </div>
+
+        <div id='filterDiv'>Select Filter (archetype)
+            <ul id="ulFilterButtons" class="ulBtnInline">
+                <li><input id='A' type="button" value="male" class="filterButtons"></li>
+                <li><input id='B'type="button" value="female" class="filterButtons"></li>
+                <li><input id='Clear' type="button" value="Clear Filter" class="filterButtons"></li>
+            </ul>
+        </div>
+
+        <!-- <div>Select Alert Value
+            <ul id="ulAlertValueButtons" class="ulBtnInline">
+                <li><input type="button" value="Mined" id="listviewAlertMined" class="alertButtons"></li>
+                <li><input type="button" value="Drill" id="listviewAlertDrill" class="alertButtons"></li>
+                <li><input type="button" value="Safety" id="listviewAlertSafety" class="alertButtons"></li>
+                <li><input type="button" value="Response" id="listviewAlertResponse" class="alertButtons"></li>
+            </ul>
+        </div> -->
+    </div>
+
+    <div id="drillPage">
+    </div>
+
+
+
+    
+</div>
+</body>
+</html>

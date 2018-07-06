@@ -1,0 +1,143 @@
+﻿body {
+	background-color: #2c2d2d;	
+	font: 12px Verdana;
+	margin: 0px;
+}
+
+h1 {
+	color: white;
+	margin: 4px;
+}
+
+#app {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: #2c2d2d;
+}
+
+#topBanner {
+	position: relative;
+	width: 100%;
+	height: 10%;
+	background-color: #2c2d2d;
+	z-index: 10000;
+	border-bottom: 10px solid #f7c051;
+	padding-top:10px;
+	padding-left: 10px;
+}
+
+#lv {
+	margin-top:0px;
+	height:80%x;
+	background:white;
+	border-right: 10px solid #bbc1c1;
+	border-left: 10px solid #bbc1c1;
+	border-radius: 5px , 0px , 5px ,0px
+
+}
+
+#lv .ibe-listview-item { /*SET SIZE OF SQUARES HERE*/
+	width: 170px;
+	height: 100px;
+	border-radius: 2px;
+	padding:5px;
+}
+
+#lv .ibe-listview-item.male { 
+	background: #2ea8aa
+	; 
+	border-color: #2ea8aa	;
+	padding:5px; 
+	border-width: 2px; 
+	color: black; 
+	
+}
+#lv .ibe-listview-item.female { 
+	background: #b429c6
+
+	; 
+	border-color: #b429c6
+
+	; 
+	border-width: 2px; 
+	color: black; 
+}
+
+#lv .ibe-listview-item.C { 
+	background: red; 
+	border-color: red; 
+	border-width: 2px; 
+	color: #EEE; 
+}
+
+.bestAlertValue {
+	background: blue; 
+	border-color: blue; 
+	border-width: 2px; 
+	color: #EEE;
+}
+
+.middleAlertValue {
+	background: orange; 
+	border-color: orange; 
+	border-width: 2px; 
+	color: #EEE;
+}
+
+.worstAlertValue {
+	background: red; 
+	border-color: red; 
+	border-width: 2px; 
+	color: #EEE;
+}
+
+
+
+.ulBtnInline {
+	margin: 0;
+	padding: 0;
+	
+}
+
+.ulBtnInline li {
+	display: inline;
+	vertical-align: top;
+}
+
+#sortAndFilterContainer  {
+	padding-left: 10px;
+	padding-top:5px;
+	color: White;
+	background: #2c2d2d;
+	height:20vh;
+	width: 100vw;
+	border-top: 10px solid #f7c051;
+
+}
+#filterDiv{
+	padding-top:5px;
+}
+#btnBack {
+	visibility: hidden;
+}
+ul  li  input {
+ height: 30px;
+ border-radius: 2px;
+ border: none;
+ background: #f7c051
+ ;
+ color: black;
+}
+
+#drillPage {
+	background-color: blue;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+	z-index:100;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
